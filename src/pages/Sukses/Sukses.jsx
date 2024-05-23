@@ -32,7 +32,12 @@ export default class Sukses extends Component {
             Terimakasih sudah membeli produk, penjual akan menghubungi Anda!
           </center>
         </p>
-        <Button variant="primary" as={Link} to="/">
+        <Button
+          variant="primary"
+          as={Link}
+          to="/"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           Kembali
         </Button>
       </div>

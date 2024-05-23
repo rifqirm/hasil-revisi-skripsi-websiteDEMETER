@@ -11,13 +11,9 @@ const ProductList = () => {
   const [search, setSearch] = useState("");
   const [limit, setLimit] = useState(3);
 
-  const { data, loading, error } = useQuery(GetSearchProductList, {
+  const { data, loading, error, refetch } = useQuery(GetSearchProductList, {
     variables: { name: `%${search}%`, limit: limit },
   });
-
-  if (error) {
-    console.log(error);
-  }
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
@@ -64,9 +60,15 @@ const ProductList = () => {
 
             <div className="container mx-auto">
               <div className="mycard row w-100 justify-content-center">
-                {data?.Product.map((card) => (
-                  <Card key={card.id} card={card} />
-                ))}
+                {loading ? (
+                  <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </div>
+                ) : (
+                  data?.Product.map((card) => (
+                    <Card key={card.id} card={card} />
+                  ))
+                )}
               </div>
             </div>
             <Button

@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 import { gql, useQuery, useMutation } from "@apollo/client";
 import { InsertProduct, GetProductList } from "../../helpers/gqlHasura";
 
-const Form = ({ product }) => {
+const FormOwner = ({ product }) => {
   const [insertProduct] = useMutation(InsertProduct, {
     refetchQueries: [{ query: GetProductList }],
   });
@@ -85,9 +85,9 @@ const Form = ({ product }) => {
     if (!data.productCathegory) {
       newErrors.productCathegory = "Harap Pilih Kategori Produk!";
     }
-    // if (!data.productImage) {
-    //   newErrors.productImage = "Harap Input Gambar Produk!";
-    // }
+    if (!data.productImage) {
+      newErrors.productImage = "Harap Input Gambar Produk!";
+    }
     if (!data.productFreshness) {
       newErrors.productFreshness = "Harap Pilih Jenis Produk!";
     }
@@ -228,7 +228,7 @@ const Form = ({ product }) => {
           {errors.productCathegory}
         </small>
       </div>
-      {/* <div className="mb-4 w-50">
+      <div className="mb-4 w-50">
         <label className="form-label" htmlFor="productImage">
           Gambar Produk
         </label>
@@ -244,7 +244,7 @@ const Form = ({ product }) => {
           {errors.productImage}
         </small>
         <p>{percent}%</p>
-      </div> */}
+      </div>
       <div className="mb-4">
         <label className="form-label" htmlFor="productFreshness">
           Jenis Produk
@@ -332,4 +332,4 @@ const Form = ({ product }) => {
   );
 };
 
-export default Form;
+export default FormOwner;

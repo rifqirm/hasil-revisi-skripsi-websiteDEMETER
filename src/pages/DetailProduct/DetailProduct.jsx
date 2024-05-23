@@ -126,6 +126,9 @@ const DetailProduct = () => {
               icon: "success",
               button: false,
               timer: 1500,
+            }).then(() => {
+              // Auto-refresh halaman setelah selesai hapus
+              window.location.reload();
             });
           })
           .catch((error) => {

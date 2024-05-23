@@ -1,28 +1,17 @@
-import { useContext, useState, useRef } from "react";
-import Button from "../../elements/Button/Button";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import Input from "../../elements/Input/Input";
-import uuid from "react-uuid";
-// import ProductsContext from "../../context/ProductsContext";
-import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { storage } from "../../config/firebaseConfig";
-import Swal from "sweetalert2";
-import { gql, useQuery, useMutation } from "@apollo/client";
+import { useState } from "react";
+import { useMutation } from "@apollo/client";
 import { InsertProduct, GetProductList } from "../../helpers/gqlHasura";
+import Swal from "sweetalert2";
+import uuid from "react-uuid";
 
 const Form = ({ product }) => {
   const [insertProduct] = useMutation(InsertProduct, {
     refetchQueries: [{ query: GetProductList }],
   });
 
-  const [percent, setPercent] = useState(0);
-
   const formData = {
-    productId: uuid(),
     productName: "",
     productCathegory: "",
-    productImage: "",
     productFreshness: "",
     productDesc: "",
     productPrice: "",
@@ -31,7 +20,6 @@ const Form = ({ product }) => {
   const formErrors = {
     productName: "",
     productCathegory: "",
-    productImage: "",
     productFreshness: "",
     productDesc: "",
     productPrice: "",
@@ -40,139 +28,78 @@ const Form = ({ product }) => {
   const [data, setData] = useState(formData);
   const [errors, setErrors] = useState(formErrors);
 
-  const fileInputRef = useRef(null); // Referensi untuk file input
-
   const handleInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
 
-    if (name === "productImage") {
-      setData((prev) => ({
-        ...prev,
-        [name]: e.target.files[0],
+    setData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    if (name === "productName" && value.length > 30) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        productName: "Please input a valid product name",
       }));
     } else {
-      setData((prev) => ({
-        ...prev,
-        [name]: value,
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        productName: "",
       }));
-    }
-
-    // Validasi panjang nama produk
-    if (name === "productName") {
-      if (value.length > 30) {
-        setErrors((prevErrors) => ({
-          ...prevErrors,
-          productName: "Please input a valid product name",
-        }));
-      } else {
-        setErrors((prevErrors) => ({
-          ...prevErrors,
-          productName: "", // Reset error jika valid
-        }));
-      }
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validasi form
     const newErrors = {};
-    if (!data.productName) {
-      newErrors.productName = "Harap Isi Nama Produk!";
-    }
-    if (!data.productCathegory) {
+    if (!data.productName) newErrors.productName = "Harap Isi Nama Produk!";
+    if (!data.productCathegory)
       newErrors.productCathegory = "Harap Pilih Kategori Produk!";
-    }
-    if (!data.productImage) {
-      newErrors.productImage = "Harap Input Gambar Produk!";
-    }
-    if (!data.productFreshness) {
+    if (!data.productFreshness)
       newErrors.productFreshness = "Harap Pilih Jenis Produk!";
-    }
-    if (!data.productDesc) {
+    if (!data.productDesc)
       newErrors.productDesc = "Harap Isi Deskripsi Tambahan!";
-    }
-    if (!data.productPrice) {
+    if (!data.productPrice)
       newErrors.productPrice = "Harap Isi Banyaknya Produk Yang Diminta!";
-    }
 
     setErrors(newErrors);
 
-    // Jika tidak ada error, kirim data
     if (Object.keys(newErrors).length === 0) {
-      console.log(data);
-      handleUploadFile();
-      setData(formData); // Reset form ke nilai awal
-      setErrors(formErrors); // Reset error ke nilai awal
-      fileInputRef.current.value = null; // Mengatur ulang nilai file input
-
-      // Tampilkan SweetAlert
-      Swal.fire({
-        icon: "success",
-        title: "Data berhasil dikirim!",
-        showConfirmButton: false,
-        timer: 1500, // Durasi SweetAlert ditampilkan dalam milidetik
-      });
-    }
-  };
-
-  const handleUploadFile = () => {
-    // handle file ref
-    const storageRef = ref(storage, `/files/${data.productImage.name}`);
-
-    // handle file upload progess
-    const uploadTask = uploadBytesResumable(storageRef, data.productImage);
-
-    // handle file upload
-    uploadTask.on(
-      "state_changed",
-
-      // callback ketika upload progress
-      (snapshot) => {
-        const percent = Math.round(
-          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-        );
-
-        //update progress
-        setPercent(percent);
-        console.log(`Progress >>> ${percent}%`);
-      },
-
-      // callback ketika upload gagal
-      (err) => {
-        console.log("error upload file", err);
-      },
-
-      //callback ketika selesai upload
-      () => {
-        // download url
-        getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-          setData((prev) => ({
-            ...prev,
-            productId: uuid(),
-            productImage: url,
-          }));
-          const newValues = { ...data, productId: uuid(), productImage: url };
-
-          console.log("url download file", url);
-          insertProduct({
-            variables: {
-              object: {
-                id: uuid(),
-                name: data.productName,
-                price: data.productPrice,
-                description: data.productDesc,
-                freshness: data.productFreshness,
-                category: data.productCathegory,
-                image: url,
-              },
+      try {
+        await insertProduct({
+          variables: {
+            object: {
+              id: uuid(),
+              name: data.productName,
+              price: data.productPrice,
+              description: data.productDesc,
+              freshness: data.productFreshness,
+              category: data.productCathegory,
             },
-          });
+          },
+        });
+
+        setData(formData);
+        setErrors(formErrors);
+
+        Swal.fire({
+          icon: "success",
+          title: "Data berhasil dikirim!",
+          text: "Data Produk Berhasil Masuk kedalam Tabel Dibawah Ini!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      } catch (error) {
+        console.error("Error inserting product:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Terjadi kesalahan!",
+          text: "Data gagal dikirim.",
         });
       }
-    );
+    }
   };
 
   return (
@@ -227,23 +154,6 @@ const Form = ({ product }) => {
         <small id="cathegoryError" className="text-danger">
           {errors.productCathegory}
         </small>
-      </div>
-      <div className="mb-4 w-50">
-        <label className="form-label" htmlFor="productImage">
-          Gambar Produk
-        </label>
-        <input
-          ref={fileInputRef}
-          className={`form-control ${errors.productImage ? "is-invalid" : ""}`}
-          name="productImage"
-          type="file"
-          onChange={handleInput}
-          accept="image/*"
-        />
-        <small id="imageError" className="text-danger">
-          {errors.productImage}
-        </small>
-        <p>{percent}%</p>
       </div>
       <div className="mb-4">
         <label className="form-label" htmlFor="productFreshness">
