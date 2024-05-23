@@ -1,0 +1,228 @@
+:root {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    --primary: #54B435;
+    --secondary: #A5D595;
+    --red: #FF6875;
+    --red-light: #FFF7F8;
+    --gray: #F6F7F8;
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .navbar {
+    background-color: var(--primary);
+  }
+  
+  .navbar-brand{
+    color: white;
+    font-family: 'Poppins';
+    font-size: 30px;
+  }
+  
+  .nav-link{
+    color: white;
+    font-family: 'Poppins';
+  }
+  
+  .nav-link:hover{
+    color: var(--secondary);
+  }
+  
+  a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+  
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    a:hover {
+      color: #747bff;
+    }
+    button {
+      background-color: #f9f9f9;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    }
+  }
+  .card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    text-align: center;
+    color: var(--bs-card-color);
+  }
+  
+  .card-title {
+    margin-bottom: var(--bs-card-title-spacer-y);
+    text-align: left;
+  }
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .p-p2 {
+    text-align: center;
+  }
+  
+  .btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--secondary);
+    --bs-btn-hover-border-color: var(--secondary);
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--secondary);
+    --bs-btn-active-border-color: var(--primary);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--primary);
+    --bs-btn-disabled-border-color: var(--primary);
+    padding: 5px 50px;
+  }
+  
+  .btn-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--secondary);
+    --bs-btn-hover-border-color: var(--secondary);
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--secondary);
+    --bs-btn-active-border-color: var(--primary);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--primary);
+    --bs-btn-disabled-border-color: var(--primary);
+    
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  /* badge warna */
+  .bg-primary {
+    background-color: #54B435!important;
+    color: white;
+  }
+  
+  
+  /* .div.list-group-item {
+    margin-left: -6px;
+  } */
+  
+  .category-aktif {
+    background-color: var(--primary);
+    color: white!important;
+  }
+  
+  .card-button {
+    text-align: center;
+  }
+  
+  .hasil {
+    height: 420px;
+  }
+  
+  /* .bayar {
+    width: 20px;
+  } */
+  
+  .overflow-auto::-webkit-scrollbar{
+    display: none;
+  }
+  
+  /* .shadow {
+    bottom: 20px;
+  } */
+  
+  /* .fixed-bottom {
+    position: relative;
+    width: 50%;
+    left: 75%;
+  } */
+  
+  .fixed-bottom {
+    position: relative;
+    width: 100%;
+    left: 0%;
+}
+
+  /* .buttonBayar {
+    width: 47.2%;
+    padding: 10px;
+  } */
+
+  .buttonBayar {
+    width: 99.2%;
+    padding: 10px;
+  }
+  
+  @media only screen and (max-height: 1000px) {
+    .hasil {
+      height: 420px;
+    }
+    
+    .menu {
+      height: 600px;
+    }
+  }

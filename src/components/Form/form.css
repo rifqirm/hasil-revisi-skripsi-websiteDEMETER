@@ -1,0 +1,4 @@
+.form-control[type=file]:not(:disabled):not([readonly]) {
+    cursor: pointer;
+    color: var(--primary);
+}

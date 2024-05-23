@@ -1,0 +1,57 @@
+.produkList {
+  font-family: 'Poppins';
+  font-size: 20px;
+}
+
+.produkList h3 {
+  font-family: 'Poppins';
+  font-weight: 900;
+}
+
+.btn-secondary2 {
+  font-size: larger;
+  width: 400px;
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-secondary2:hover {
+  font-size: larger;
+  width: 400px;
+  background-color: var(--secondary);
+  color: white;
+}
+
+.handleSearch {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .inputWrapper {
+    position: relative;
+    width: 50rem;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .searchIcon {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+  }

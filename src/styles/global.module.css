@@ -1,0 +1,786 @@
+:root{
+    --primary: #54B435;
+    --secondary: #A5D595;
+    --red: #FF6875;
+    --red-light: #FFF7F8;
+    --gray: #F6F7F8;
+
+}
+body{
+    margin: 10;
+}
+.wrapper{
+    min-height: 653px;
+}
+
+.container{
+    font-family: 'Poppins';
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.container  p{
+    margin-top: 0;
+    margin-bottom: -60px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.color_primary{
+    font-family: 'Poppins';
+    color: var(--primary);
+    font-size: 30px;
+}
+
+.banner1{
+    background-image: url('../assets/home_banner5.png');
+    margin-left: 0px;
+    width: auto; 
+}
+
+.bg_primary{
+    background-color: var(--primary);
+    height: 590px;
+}
+
+.bg_primary2{
+    background-color: var(--primary);
+    height: 290px;
+}
+
+.custom_banner{
+    min-height: 200px;
+    margin-top: 250px;
+}
+
+.banner_link h1{
+    font-family: 'Poppins';
+    color: white;
+    font-size: xxx-large;
+
+}
+
+.banner_link p{
+    font-family: 'Poppins';
+    color: white;
+    font-size: 18px;
+    margin-top: 45px;
+    margin-bottom: 41px;
+
+}
+
+.banner_link a{
+    font-family: 'Poppins';
+    color: white;
+    font-size: 20px;
+
+}
+
+.banner_link a:hover{
+    color: red;
+}
+
+.row2 h4{
+    margin-left: 2.5rem;
+    margin-top: -52px;
+    margin-bottom: 90px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.grid2{
+    padding: 0px 70px;
+    display: inline-flex;
+}
+
+.grid3{
+    padding: 10px 60px;
+    display: inline-flex;
+    gap: 55px;
+    /* margin-left: 200px; */
+}
+
+.grid3 h4{
+    font-family: 'Poppins';
+    font-size: 30px;
+    padding: 30px 0px;
+    font-weight: bold;
+}
+
+.grid3 div{
+    width: 53.333333%;
+    font-size: 18px;
+    height: 475px;
+    font-family: 'Poppins';
+    position: relative;
+    top: 70px;
+    text-align: center;
+}
+
+.grid3 div svg{
+    color: #FF6875;
+    width: 100px!important;
+    height: 100px!important;
+}
+
+.image_custom_banner{
+    position: relative;
+    height: 900px;
+    top: -460px;
+    width: 700px;
+}
+
+.footer{
+    font-family: 'Poppins';
+    text-align: center;
+    color: white;
+    height: 250px;
+    margin-top: 110px;
+    padding: 50px;
+}
+
+.footer img{
+    margin-right: 155px;
+    width: 50px;
+}
+
+.footer p{
+    text-align: center;
+}
+
+
+.grid2 div{
+    width: 50%;
+    position: relative;
+    top: 150px;
+
+}
+
+.cart{
+    text-align: center;
+    padding: 20px;
+
+}
+
+.grid_product{
+    display: inline-flex;
+    flex-flow: wrap;
+}
+
+.item_product{
+    width: 25%;
+    text-align: center;
+}
+
+.item_product div{
+    padding: 60px 40px 60px 40px;
+}
+
+.item_product div img{
+    width: 100%;
+}
+
+.item_product h4{
+    font-family: 'Poppins';
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+
+.item_product div h5{
+    font-family: 'Poppins';
+    font-size: 24px;
+    margin: 10px;
+    color: var(--primary);
+}
+
+.item_product div a{
+    background-color: var(--primary);
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
+.item_product div a:hover{
+    background-color: #A5D595;
+}
+
+.margin_left{
+    font-family: 'Poppins';
+    padding: 65px;
+}
+
+
+.input_group1 input[type=search]{
+    padding: 7.5px  25px;
+    border: 2px solid var(--secondary);
+    border-radius: 5px 0 0 5px;
+    width: 400px;
+    font-size: 18px;
+}
+
+.input_group1 button{
+    background-color: var(--primary);
+    font-family: 'Poppins';
+    padding: 9.5px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    font-size: 18px;
+    width: 110px;
+
+}
+
+.input_group1 button:hover{
+    background-color: var(--secondary);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+
+}
+
+.detail_product{
+    display: inline-flex;
+    width: 100%;
+}
+
+.description_product{
+    padding: 50px 100px;
+    background: var(--gray);
+    border-radius: 10px;
+    margin-top: 50px;
+    margin: 120px 0px 120px 0px;
+}
+
+.detail_product div.item:nth-child(1){
+    width: 35%;
+
+}
+
+.detail_product div.item:nth-child(1) img{
+    width: 100%;
+
+}
+
+.detail_product div.item:nth-child(2) button.tambah_keranjang{
+    position: relative;
+    font-family: 'Poppins';
+    width: 240px;
+    float: right;
+    top: 0px;
+    padding: 10px 50px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail_product div.item:nth-child(2) button.tambah_keranjang:hover{
+    position: relative;
+    font-family: 'Poppins';
+    width: 240px;
+    float: right;
+    top: 0px;
+    padding: 10px 50px;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.detail_product div.item:nth-child(2) button.tambah_keranjang svg{
+    fill: white;
+    margin-top: -5px;
+
+}
+
+/* .input_group2{
+    background: var(--gray);
+    display: inline-flex;
+    padding: 10px;
+} */
+
+.detail_product h2{
+    font-family: 'Poppins';
+    font-weight: bolder;
+}
+
+.detail_product h4{
+    color: var(--primary);
+    font-family: 'Poppins';
+}
+
+.input_group2 input[type=number]{
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    width: 80px;
+
+}
+
+.input_group2 button{
+    background: transparent;
+    color: var(--primary);
+    border: none;
+    font-weight: 900;
+    
+    
+    justify-content: space-around;
+}
+
+.detail_product div.item:nth-child(2){
+    width: 65%;
+    margin-left: 20px;
+
+}
+
+.container_detail_product{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.cart_container{
+    margin: 50px 200px;
+}
+
+.cart_container table{
+    width: 100%;
+
+}
+
+.cart_container table thead tr th, .cart_container table tbody tr td{
+    border-bottom: 5px solid #e7e7e7;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+.cart_container table thead tr th{
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+.cart_container table tbody tr td{
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+.item_cart{
+    display: inline-flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 350px;
+}
+
+
+
+.item_cart img{
+    width: 100px;
+    height: 100px;
+}
+
+.text_center{
+    font-family: 'Poppins';
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.text_right{
+    text-align: right;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+.item_cart h4{
+    margin-left: 20px;
+}
+
+.delete_cart{
+    background: var(--red-light);
+    text-align: center;
+    padding: 0px 7px 6px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: none;
+    color: var(--red);
+    cursor: pointer;
+}
+
+.delete_cart:hover{
+    color: var(--red-light);
+    background: var(--red);
+    transition: all .3s ease;
+}
+
+.table_total_cart{
+    font-family: 'Poppins';
+    font-size: 20px;
+    width: 250px;
+    height: 130px;
+    float: right;
+}
+
+.table_total_cart a{
+    font-family: 'Poppins';
+    font-size: 20px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.table_total_cart a:hover{
+    opacity: .7;
+}
+
+.total_cart div{
+    height: 170px;
+    margin: 0 200px;
+}
+
+/* .button_cart{
+    width: 250px;
+} */
+
+.form_2_grid{
+    display: inline-flex;
+}
+
+.grid_form_2{
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.form{
+    text-align: center;
+    width: 100%;
+}
+
+.input_style{
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px;
+    border: none;
+    background: #eaeaea;
+    border-radius: 5px;
+}
+
+.input_textarea{
+    height: 120px;
+}
+
+.payment_method{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.payment_method2{
+    font-family: 'Poppins';
+    font-size: 15px;
+}
+
+.payment_method svg{
+    fill: var(--primary);
+    width: 40px;
+    height: 40px;
+    text-align: left;
+}
+
+.payment_method span{
+    position: relative;
+    top: 3px;
+    left: 12px;
+    bottom: 20px;
+}
+
+.payment_method p{
+    margin-top: 5px;
+}
+
+.row_bank{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn_primary{
+    font-family: 'Poppins';
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-grid;
+    text-decoration: none;
+    
+}
+
+.btn_primary:hover{
+    opacity: .7;
+}
+
+.transaksi_container svg{
+    fill: var(--primary);
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.transaksi_container h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    margin-bottom: 0;
+}
+
+.transaksi_container p{
+    font-family: 'Poppins';
+    margin-bottom: 20px;
+}
+
+.space{
+    font-family: 'Poppins';
+    height: 50px;
+}
+
+.contact_left{
+    background: var(--primary);
+    padding: 20px;
+    color: white;
+    min-height: 600px;
+    margin-left: -95px;
+    width: 140%;
+}
+
+.contact_left:before{
+    content: '';
+    background: var(--primary);
+    padding: 11px;
+    border-radius: 62px;
+    float: right;
+    position: relative;
+    left: 34px;
+    top: calc(450px / 2 - 40px);
+    height: 90px;
+    width: 90px;
+    margin: -20px;
+    margin-top: 50px;
+}
+
+.contact_left h2{
+    font-size: 50px;
+    margin-bottom: 60px;
+    margin-top: 130px;
+}
+
+.contact_left h2 p{
+    margin-left: 20px;
+}
+
+.form_group{
+    text-align: left;
+}
+
+.shadow{
+    box-shadow: 4px 2px 8px rgb(0 0 0/ 21%);
+    width: 113%;
+}
+
+.minPadding{
+    padding: 0!important;
+}
+
+.form_style2{
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-right: 20px;
+    width: 150%;
+}
+
+.flex{
+    display: inline-flex;
+}
+
+.flex p{
+    font-family: 'Poppins';
+    display: inline-flex;
+}
+
+
+.form_group input, .form_group textarea{
+    margin: 0 0 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    display: block;
+    width: -webkit-fill-available;
+}
+
+
+
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap; /* agar elemen footer dapat wrap ke bawah jika diperlukan */
+}
+
+.footerLeft {
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Menjadikan konten dalam kolom */
+    text-align: center; /* Menengahkan konten */
+    margin-left: 40rem;
+    margin-bottom: -5rem;
+}
+
+.logoContainer img {
+    height: 50px; /* Sesuaikan dengan tinggi logo */
+    margin-bottom: 10px; /* Jarak antara logo dan teks */
+}
+
+.hubungiKami {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Menjadikan konten dalam kolom */
+    margin-left: 17rem;
+    margin-top: 3rem;
+}
+
+.hubungiKami h5 {
+    margin-bottom: 5px; /* Jarak antara judul dan ikon */
+}
+
+.hubungiKami div a {
+    margin-bottom: 5px; /* Jarak antara ikon */
+}
+
+.sosmedIcons a {
+    color: white;
+    font-size: 24px; /* Ukuran ikon */
+    margin-right: 10px; /* Jarak antara ikon */
+}
+
+.sosmedIcons a:hover {
+    /* color: rgb(184, 184, 184); */
+    color: #A5D595
+}
+
+.sosmedIcons a:last-child {
+    margin-right: 0; /* Hapus jarak kanan untuk ikon terakhir */
+}
+
+.footerRight {
+    text-align: center; /* Posisi tengah */
+    width: 100%; /* agar footerRight memenuhi lebar */
+    margin-top: 20px; /* Jarak dari atas */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .footerLeft {
+        margin-left: auto; /* Menempatkan ke kanan */
+        margin-right: 20px; /* Mengatur jarak kanan */
+    }
+
+    .hubungiKami {
+        margin-left: auto; /* Menempatkan ke kanan */
+        margin-right: 20px; /* Mengatur jarak kanan */
+        margin-top: 20px; /* Mengatur jarak atas */
+    }
+}
+
+/* Responsif untuk layar ukuran 1200px */
+@media (max-width: 1200px) {
+    .footerLeft {
+        flex-direction: column; /* Menjadikan konten dalam kolom */
+        align-items: center; /* Menengahkan konten */
+    }
+
+    .hubungiKami {
+        margin-left: 0; /* Reset margin kiri */
+        margin-top: 10px; /* Mengatur jarak atas */
+    }
+
+    .hubungiKami h5 {
+        margin-bottom: 10px; /* Jarak antara judul dan ikon */
+    }
+
+    .sosmedIcons a {
+        font-size: 30px; /* Perbesar ukuran ikon */
+        margin-bottom: 10px; /* Jarak antara ikon */
+    }
+
+    .sosmedIcons a:last-child {
+        margin-bottom: 0; /* Hapus jarak bawah untuk ikon terakhir */
+    }
+}
+
+
+  
+  
+  
+  
+
+@media (max-width: 768px) {
+    .grid_product {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      justify-items: center;
+    }
+  
+    .banner_container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      gap: 1rem;
+    }
+  
+    .banner_link {
+      order: 2;
+    }
+  
+    .features {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+  }
+  

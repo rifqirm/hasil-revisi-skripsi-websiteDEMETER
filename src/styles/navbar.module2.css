@@ -1,0 +1,70 @@
+/* navbar.module.css */
+
+.header {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Tengahkan vertikal */
+}
+
+.logo {
+  width: 120px; /* Atur lebar logo */
+}
+
+.topmenu {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* Atur jarak antara menu */
+  margin: 0;
+  padding: 0;
+}
+
+.topmenu li a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #212121;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 10px 15px; /* Atur padding */
+}
+
+.cart {
+  padding: 10px;
+}
+
+.iconCart {
+  color: var(--primary);
+  font-size: 24px; /* Atur ukuran ikon */
+  transition: color 0.3s;
+}
+
+.cartIcon:hover {
+  color: #A5D595;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px;
+    flex-direction: column; /* Menuju ke tata letak kolom pada perangkat kecil */
+    align-items: flex-start; /* Geser ke kiri */
+  }
+
+  .topmenu {
+    margin-top: 20px; /* Atur margin atas */
+    align-self: stretch; /* Mengisi lebar penuh */
+  }
+
+  .topmenu li a {
+    font-size: 14px;
+    padding: 10px; /* Atur padding */
+  }
+
+  .cart {
+    margin-top: 20px; /* Atur margin atas */
+  }
+}

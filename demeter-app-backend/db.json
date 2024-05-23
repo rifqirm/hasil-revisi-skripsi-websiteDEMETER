@@ -1,0 +1,918 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "nama": "Aglonema"
+    },
+    {
+      "id": 2,
+      "nama": "Homalomena"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "kode": "K-01",
+      "nama": "Aglonema Ayunindi",
+      "harga": 35000,
+      "is_ready": true,
+      "gambar": "1aglonemaAyunindi.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 2,
+      "kode": "K-02",
+      "nama": "Aglonema Bigroy",
+      "harga": 60000,
+      "is_ready": true,
+      "gambar": "2aglonemaBigroy.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 3,
+      "kode": "K-03",
+      "nama": "Aglonema Khocin",
+      "harga": 60000,
+      "is_ready": true,
+      "gambar": "3aglonemaKhocin.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 4,
+      "kode": "K-04",
+      "nama": "Aglonema Red Anjamani",
+      "harga": 80000,
+      "is_ready": true,
+      "gambar": "4aglonemaRedAnjamaniDewasa.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 5,
+      "kode": "K-05",
+      "nama": "Aglonema Red Chocin",
+      "harga": 80000,
+      "is_ready": true,
+      "gambar": "5aglonemaRedChocin.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 6,
+      "kode": "K-06",
+      "nama": "Aglonema Red Majesty",
+      "harga": 96000,
+      "is_ready": true,
+      "gambar": "6aglonemaRedMajesty.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 7,
+      "kode": "K-07",
+      "nama": "Aglonema RoDud Anjamani",
+      "harga": 65000,
+      "is_ready": true,
+      "gambar": "7aglonemaRoDudAnjamani.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 8,
+      "kode": "K-08",
+      "nama": "Aglonema Rotundum Aceh",
+      "harga": 30000,
+      "is_ready": true,
+      "gambar": "8aglonemaRotundumAceh.jpg",
+      "category": {
+        "id": 3,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 9,
+      "kode": "K-09",
+      "nama": "Aglonema Snow White Remaja",
+      "harga": 30000,
+      "is_ready": true,
+      "gambar": "9aglonemaSnowWhiteRemaja.jpg",
+      "category": {
+        "id": 3,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 10,
+      "kode": "K-010",
+      "nama": "Aglonema Suksom",
+      "harga": 35000,
+      "is_ready": true,
+      "gambar": "10aglonemaSuksom.jpg",
+      "category": {
+        "id": 3,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 11,
+      "kode": "K-011",
+      "nama": "Aglonema Super White",
+      "harga": 90000,
+      "is_ready": true,
+      "gambar": "11aglonemaSuperWhite.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 12,
+      "kode": "K-012",
+      "nama": "Aglonema Venus",
+      "harga": 65000,
+      "is_ready": true,
+      "gambar": "12aglonemaVenus.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Aglonema"
+      }
+    },
+    {
+      "id": 13,
+      "kode": "K-013",
+      "nama": "Homalomena Emerald Gem",
+      "harga": 120000,
+      "is_ready": true,
+      "gambar": "1homalomenaEmeraldGem.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 14,
+      "kode": "K-014",
+      "nama": "Homalomena Purple Sword",
+      "harga": 1038853,
+      "is_ready": true,
+      "gambar": "2homalomenaPurpleSword3.webp",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 15,
+      "kode": "K-015",
+      "nama": "Homalomena Selby",
+      "harga": 60000,
+      "is_ready": true,
+      "gambar": "3homalomenaSelby.webp",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 16,
+      "kode": "K-016",
+      "nama": "Homalomena Lemon Glow",
+      "harga": 50000,
+      "is_ready": true,
+      "gambar": "4homalomenaLemonGlow.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 17,
+      "kode": "K-017",
+      "nama": "Homalomena Pictum Tricolor",
+      "harga": 420000,
+      "is_ready": true,
+      "gambar": "5homalomenaPictumTricolor2.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 18,
+      "kode": "K-018",
+      "nama": "Homalomena Black Velvet",
+      "harga": 200000,
+      "is_ready": true,
+      "gambar": "6homalomenaBlackVelvet.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 19,
+      "kode": "K-019",
+      "nama": "Homalomena Silver Red",
+      "harga": 125000,
+      "is_ready": true,
+      "gambar": "7homalomenaSilverRed.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 20,
+      "kode": "K-020",
+      "nama": "Homalomena Hainanensis",
+      "harga": 600000,
+      "is_ready": true,
+      "gambar": "8homalomenaHomalomenaSchismatogl.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 21,
+      "kode": "K-021",
+      "nama": "Homalomena Anubias Sp",
+      "harga": 10000,
+      "is_ready": true,
+      "gambar": "9homalomenaAnubiasSp.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 22,
+      "kode": "K-022",
+      "nama": "Homalomena Wallisii Army",
+      "harga": 385000,
+      "is_ready": true,
+      "gambar": "10homalomenaJavanicalisiiArmy.webp",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 23,
+      "kode": "K-023",
+      "nama": "Homalomena Javanica",
+      "harga": 20000,
+      "is_ready": true,
+      "gambar": "11HomalomenaJavanica.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    },
+    {
+      "id": 24,
+      "kode": "K-024",
+      "nama": "Homalomena Maggie",
+      "harga": 150000,
+      "is_ready": true,
+      "gambar": "12HomalomenaMaggie.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Homalomena"
+      }
+    }
+  ],
+  "keranjangs": [
+    {
+      "jumlah": 1,
+      "total_harga": 60000,
+      "product": {
+        "id": 3,
+        "kode": "K-03",
+        "nama": "Aglonema Khocin",
+        "harga": 60000,
+        "is_ready": true,
+        "gambar": "3aglonemaKhocin.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Aglonema"
+        }
+      },
+      "id": 1
+    }
+  ],
+  "pesanans": [
+    {
+      "total_bayar": 2317706,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 15,
+            "kode": "K-015",
+            "nama": "Homalomena Selby",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3homalomenaSelby.webp",
+            "category": {
+              "id": 2,
+              "nama": "Homalomena"
+            }
+          },
+          "keterangan": "TESTTTTTTTTTTTT",
+          "id": 1
+        },
+        {
+          "jumlah": 2,
+          "total_harga": 2077706,
+          "product": {
+            "id": 14,
+            "kode": "K-014",
+            "nama": "Homalomena Purple Sword",
+            "harga": 1038853,
+            "is_ready": true,
+            "gambar": "2homalomenaPurpleSword3.webp",
+            "category": {
+              "id": 2,
+              "nama": "Homalomena"
+            }
+          },
+          "id": 2
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 3
+        },
+        {
+          "jumlah": 2,
+          "total_harga": 120000,
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Aglonema Bigroy",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "2aglonemaBigroy.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 4
+        }
+      ],
+      "id": 1
+    },
+    {
+      "total_bayar": 120000,
+      "menus": [
+        {
+          "jumlah": 2,
+          "total_harga": 120000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "keterangan": "Arrghhhhhhhh",
+          "id": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "total_bayar": 120000,
+      "menus": [
+        {
+          "jumlah": 2,
+          "total_harga": 120000,
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Aglonema Bigroy",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "2aglonemaBigroy.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "keterangan": "Testt",
+          "id": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "total_bayar": 20777060,
+      "menus": [
+        {
+          "jumlah": 20,
+          "total_harga": 20777060,
+          "product": {
+            "id": 14,
+            "kode": "K-014",
+            "nama": "Homalomena Purple Sword",
+            "harga": 1038853,
+            "is_ready": true,
+            "gambar": "2homalomenaPurpleSword3.webp",
+            "category": {
+              "id": 2,
+              "nama": "Homalomena"
+            }
+          },
+          "keterangan": "Good",
+          "id": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 5
+    },
+    {
+      "total_bayar": 240000,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 1
+        },
+        {
+          "jumlah": 3,
+          "total_harga": 180000,
+          "product": {
+            "id": 15,
+            "kode": "K-015",
+            "nama": "Homalomena Selby",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3homalomenaSelby.webp",
+            "category": {
+              "id": 2,
+              "nama": "Homalomena"
+            }
+          },
+          "keterangan": "Oke Gaes Barang Bagus yaaa",
+          "id": 2
+        }
+      ],
+      "id": 6
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 7
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 8
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 9
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 10
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 11
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 12
+    },
+    {
+      "total_bayar": 60000,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 1
+        }
+      ],
+      "id": 13
+    },
+    {
+      "total_bayar": 60000,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 1
+        }
+      ],
+      "id": 14
+    },
+    {
+      "total_bayar": 60000,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 1
+        }
+      ],
+      "id": 15
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 16
+    },
+    {
+      "total_bayar": 60000,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 1
+        }
+      ],
+      "id": 17
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 18
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 19
+    },
+    {
+      "total_bayar": 295000,
+      "menus": [
+        {
+          "jumlah": 5,
+          "total_harga": 175000,
+          "product": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Aglonema Ayunindi",
+            "harga": 35000,
+            "is_ready": true,
+            "gambar": "1aglonemaAyunindi.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "keterangan": "Masuk yaaa",
+          "id": 1
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Aglonema Bigroy",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "2aglonemaBigroy.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 2
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 15,
+            "kode": "K-015",
+            "nama": "Homalomena Selby",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3homalomenaSelby.webp",
+            "category": {
+              "id": 2,
+              "nama": "Homalomena"
+            }
+          },
+          "id": 3
+        }
+      ],
+      "id": 20
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 21
+    },
+    {
+      "total_bayar": 456000,
+      "menus": [
+        {
+          "jumlah": 5,
+          "total_harga": 300000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "keterangan": "test masuk",
+          "id": 1
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 96000,
+          "product": {
+            "id": 6,
+            "kode": "K-06",
+            "nama": "Aglonema Red Majesty",
+            "harga": 96000,
+            "is_ready": true,
+            "gambar": "6aglonemaRedMajesty.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 3
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 15,
+            "kode": "K-015",
+            "nama": "Homalomena Selby",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3homalomenaSelby.webp",
+            "category": {
+              "id": 2,
+              "nama": "Homalomena"
+            }
+          },
+          "id": 4
+        }
+      ],
+      "id": 22
+    },
+    {
+      "total_bayar": 420000,
+      "menus": [
+        {
+          "jumlah": 4,
+          "total_harga": 240000,
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Aglonema Bigroy",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "2aglonemaBigroy.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "keterangan": "hati hati",
+          "id": 1
+        },
+        {
+          "jumlah": 3,
+          "total_harga": 180000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "keterangan": "Oke goood quality",
+          "id": 2
+        }
+      ],
+      "id": 23
+    },
+    {
+      "total_bayar": 720000,
+      "menus": [
+        {
+          "jumlah": 11,
+          "total_harga": 660000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 1
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Aglonema Bigroy",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "2aglonemaBigroy.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 2
+        }
+      ],
+      "id": 24
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 25
+    },
+    {
+      "total_bayar": 540000,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Aglonema Khocin",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "3aglonemaKhocin.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 1
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 60000,
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Aglonema Bigroy",
+            "harga": 60000,
+            "is_ready": true,
+            "gambar": "2aglonemaBigroy.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Aglonema"
+            }
+          },
+          "id": 2
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 420000,
+          "product": {
+            "id": 17,
+            "kode": "K-017",
+            "nama": "Homalomena Pictum Tricolor",
+            "harga": 420000,
+            "is_ready": true,
+            "gambar": "5homalomenaPictumTricolor2.jpg",
+            "category": {
+              "id": 2,
+              "nama": "Homalomena"
+            }
+          },
+          "id": 3
+        }
+      ],
+      "id": 26
+    }
+  ]
+}
