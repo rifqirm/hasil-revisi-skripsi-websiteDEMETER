@@ -107,6 +107,7 @@ const TableItem = ({ table, index }) => {
       </td>
       <td
         className={isEditing ? "text-white" : ""}
+        style={{ textAlign: "center" }} // Add this line
         contentEditable={isEditing}
         suppressContentEditableWarning={true}
         onInput={(e) =>

@@ -12,8 +12,8 @@ const HeaderOwner = () => {
       en: "Update Product Request",
     },
     description: {
-      id: "Di bawah ini adalah formulir yang dibuat untuk memperbarui atau menyetujui produk yang diminta. Setiap pengguna boleh mengasih saran atau meminta dimasukan-nya produk melalui menu tambah produk ini dengan mengisi formulir dibawah ini. Semua saran atau permintaan penambahan produk akan kami seleksi secara menyeluruh, terima kasih. 😊",
-      en: "Below is a form created to update or approve a requested product. Every user is welcome to provide suggestions or request the addition of a product through this Add Product menu by filling out the form below. All suggestions or product addition requests will be thoroughly reviewed. Thank you. 😊",
+      id: "Di bawah ini adalah formulir yang dibuat untuk memperbarui atau menyetujui produk yang diminta oleh admin. Semua saran atau permintaan penambahan produk akan kami seleksi secara menyeluruh, terima kasih. 😊",
+      en: "Below is a form created to update or approve a requested product by admin. All suggestions or product addition requests will be thoroughly reviewed. Thank you. 😊",
     },
   };
 
