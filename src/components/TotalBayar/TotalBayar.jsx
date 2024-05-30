@@ -191,7 +191,7 @@ function TotalBayar(props) {
             </Form.Group>
 
             <Form.Group controlId="nomorHP">
-              <Form.Label>Nomor Handphone</Form.Label>
+              <Form.Label className="mt-3">Nomor Handphone</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Masukkan nomor HP Anda!"
@@ -203,7 +203,7 @@ function TotalBayar(props) {
             </Form.Group>
 
             <Form.Group controlId="email">
-              <Form.Label>Email</Form.Label>
+              <Form.Label className="mt-3">Email</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Masukkan email Anda!"
@@ -215,7 +215,7 @@ function TotalBayar(props) {
             </Form.Group>
 
             <Form.Group controlId="noKtp">
-              <Form.Label>Nomor NIK KTP</Form.Label>
+              <Form.Label className="mt-3">Nomor NIK KTP</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Masukkan nomor NIK KTP Anda (16 digit angka)!"
@@ -227,7 +227,7 @@ function TotalBayar(props) {
             </Form.Group>
 
             <Form.Group controlId="alamat">
-              <Form.Label>Alamat</Form.Label>
+              <Form.Label className="mt-3">Alamat</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={3}
