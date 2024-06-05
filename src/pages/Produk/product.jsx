@@ -1,19 +1,24 @@
-import React, { useState } from "react";
+import "./product.css"; // Import CSS directly
+import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import { GetSearchProductList } from "../../helpers/gqlHasura";
 import Input from "../../elements/Input/Input";
 import Button from "../../elements/Button/Button";
 import Card from "../../components/Card/Card";
 import logo from "../../assets/logo2.svg.svg";
-import Styles from "./product.css";
+// import uuid from "react-uuid"; // Import uuid for unique ids
 
 const ProductList = () => {
   const [search, setSearch] = useState("");
   const [limit, setLimit] = useState(3);
 
-  const { data, loading, error, refetch } = useQuery(GetSearchProductList, {
+  const { data, loading, error } = useQuery(GetSearchProductList, {
     variables: { name: `%${search}%`, limit: limit },
   });
+
+  if (error) {
+    console.log(error);
+  }
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
@@ -43,14 +48,14 @@ const ProductList = () => {
               </center>
             </p>
 
-            <div className={`${Styles.handleSearch} mb-3 w-25 mx-auto`}>
-              <label className={`${Styles.label} form-label mt-5`}>
+            <div className="handleSearch mb-3 w-25 mx-auto">
+              <label className="label form-label mt-5">
                 <strong>Masukan Pencarian:</strong>
               </label>
-              <div className={Styles.inputWrapper}>
+              <div className="inputWrapper">
                 <input
                   type="text"
-                  className={`${Styles.input} form-control`}
+                  className="input form-control"
                   value={search}
                   onChange={handleSearch}
                   placeholder="🔍 Search Product..."

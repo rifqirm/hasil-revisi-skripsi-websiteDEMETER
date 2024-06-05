@@ -31,8 +31,9 @@
   }
   
   .inputWrapper {
+    text-align: center;
     position: relative;
-    width: 50rem;
+    width: 23.3rem;
   }
   
   .input {

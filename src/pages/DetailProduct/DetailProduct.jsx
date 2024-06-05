@@ -172,6 +172,9 @@ const DetailProduct = () => {
             text: "Produk " + dataEdit.productName + " berhasil diperbarui",
             icon: "success",
             confirmButtonColor: "#54B435",
+          }).then(() => {
+            // Auto-refresh halaman setelah selesai hapus
+            window.location.reload();
           });
         })
         .catch((error) => {
