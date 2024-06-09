@@ -1,24 +1,34 @@
 import "./product.css"; // Import CSS directly
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useQuery } from "@apollo/client";
-import { GetSearchProductList } from "../../helpers/gqlHasura";
+import {
+  GetSearchProductList,
+  GetSearchProductListOwner,
+} from "../../helpers/gqlHasura";
 import Input from "../../elements/Input/Input";
 import Button from "../../elements/Button/Button";
 import Card from "../../components/Card/Card";
 import logo from "../../assets/logo2.svg.svg";
-// import uuid from "react-uuid"; // Import uuid for unique ids
 
 const ProductList = () => {
   const [search, setSearch] = useState("");
   const [limit, setLimit] = useState(3);
 
-  const { data, loading, error } = useQuery(GetSearchProductList, {
+  const {
+    data: dataProduct,
+    loading: loadingProduct,
+    error: errorProduct,
+  } = useQuery(GetSearchProductList, {
     variables: { name: `%${search}%`, limit: limit },
   });
 
-  if (error) {
-    console.log(error);
-  }
+  const {
+    data: dataProductOwner,
+    loading: loadingProductOwner,
+    error: errorProductOwner,
+  } = useQuery(GetSearchProductListOwner, {
+    variables: { nameowner: `%${search}%`, limit1: limit },
+  });
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
@@ -28,10 +38,15 @@ const ProductList = () => {
     setLimit(limit + 3);
   };
 
+  if (errorProduct || errorProductOwner) {
+    console.log(errorProduct || errorProductOwner);
+    return <p>Error: {(errorProduct || errorProductOwner).message}</p>;
+  }
+
   return (
     <>
       <center>
-        <div className="container text-center">
+        <div className="container text-center mt-5">
           <img
             style={{ height: 300, width: "300px" }}
             src={logo}
@@ -44,7 +59,7 @@ const ProductList = () => {
             <p>
               <center>
                 Berisi daftar produk yang telah di buat di halaman permintaan
-                produk.
+                produk dan Disetujui oleh Admin.
               </center>
             </p>
 
@@ -65,14 +80,19 @@ const ProductList = () => {
 
             <div className="container mx-auto">
               <div className="mycard row w-100 justify-content-center">
-                {loading ? (
+                {loadingProduct || loadingProductOwner ? (
                   <div className="spinner-border" role="status">
                     <span className="visually-hidden">Loading...</span>
                   </div>
                 ) : (
-                  data?.Product.map((card) => (
-                    <Card key={card.id} card={card} />
-                  ))
+                  <>
+                    {dataProduct?.Product?.map((card) => (
+                      <Card key={card.id} card={card} />
+                    ))}
+                    {dataProductOwner?.ProductOwner?.map((card) => (
+                      <Card key={card.id2} card={card} />
+                    ))}
+                  </>
                 )}
               </div>
             </div>

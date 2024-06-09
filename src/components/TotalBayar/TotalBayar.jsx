@@ -219,6 +219,7 @@ function TotalBayar(props) {
               <Form.Control
                 type="text"
                 placeholder="Masukkan nomor NIK KTP Anda (16 digit angka)!"
+                maxLength={16}
                 name="noKtp"
                 value={form.noKtp}
                 onChange={handleInputChange}

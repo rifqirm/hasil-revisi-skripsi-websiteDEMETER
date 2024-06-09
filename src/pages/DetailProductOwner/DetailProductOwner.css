@@ -1,0 +1,12 @@
+.btn-warning2 {
+    width: 20rem;
+    background-color: #F6B21B;
+    color: black;
+  }
+
+.btn-warning2:hover {
+    width: 20rem;
+    background-color: #f6b11b83;
+    color: rgba(0, 0, 0, 0.544);
+  }
+   

@@ -1,25 +1,24 @@
-import { useContext, useState, useRef } from "react";
-import Button from "../../elements/Button/Button";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import Input from "../../elements/Input/Input";
+import { useState, useRef } from "react";
 import uuid from "react-uuid";
 // import ProductsContext from "../../context/ProductsContext";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../../config/firebaseConfig";
 import Swal from "sweetalert2";
-import { gql, useQuery, useMutation } from "@apollo/client";
-import { InsertProduct, GetProductList } from "../../helpers/gqlHasura";
+import { useMutation } from "@apollo/client";
+import {
+  GetProductListOwner,
+  InsertProductOwner,
+} from "../../helpers/gqlHasura";
 
 const FormOwner = ({ product }) => {
-  const [insertProduct] = useMutation(InsertProduct, {
-    refetchQueries: [{ query: GetProductList }],
+  const [insertProductOwner] = useMutation(InsertProductOwner, {
+    refetchQueries: [{ query: GetProductListOwner }],
   });
 
   const [percent, setPercent] = useState(0);
 
   const formData = {
-    productId: uuid(),
+    productownerId: uuid(),
     productName: "",
     productCathegory: "",
     productImage: "",
@@ -151,22 +150,26 @@ const FormOwner = ({ product }) => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
           setData((prev) => ({
             ...prev,
-            productId: uuid(),
+            productownerId: uuid(),
             productImage: url,
           }));
-          const newValues = { ...data, productId: uuid(), productImage: url };
+          const newValues = {
+            ...data,
+            productownerId: uuid(),
+            productImage: url,
+          };
 
           console.log("url download file", url);
-          insertProduct({
+          insertProductOwner({
             variables: {
               object: {
-                id: uuid(),
-                name: data.productName,
-                price: data.productPrice,
-                description: data.productDesc,
-                freshness: data.productFreshness,
-                category: data.productCathegory,
-                image: url,
+                id2: uuid(),
+                name2: data.productName,
+                price2: data.productPrice,
+                description2: data.productDesc,
+                freshness2: data.productFreshness,
+                category2: data.productCathegory,
+                image2: url,
               },
             },
           });

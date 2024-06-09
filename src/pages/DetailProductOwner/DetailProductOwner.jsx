@@ -1,3 +1,4 @@
+import "./DetailProductOwner.css"; // Import CSS directly
 import { useNavigate, useParams } from "react-router-dom";
 import { gql, useMutation, useQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
@@ -5,19 +6,19 @@ import Input from "../../elements/Input/Input";
 import Button from "../../elements/Button/Button";
 import swal from "sweetalert";
 import Swal from "sweetalert2";
-import { UpdateProduct, HapusProduct } from "../../helpers/gqlHasura";
+import { UpdateProductOwner, HapusProductOwner } from "../../helpers/gqlHasura";
 
-const DetailProduct = () => {
-  const [hapusProduct] = useMutation(HapusProduct);
-  const [updateProduct] = useMutation(UpdateProduct);
+const DetailProductOwner = () => {
+  const [hapusProductOwner] = useMutation(HapusProductOwner);
+  const [updateProductOwner] = useMutation(UpdateProductOwner);
   const navigate = useNavigate();
-  const { productId } = useParams();
+  const { productownerId } = useParams();
 
   const formData = {
-    productId: "",
+    productownerId: "",
     productName: "",
     productCathegory: "",
-    // productImage: "",
+    productImage: "",
     productFreshness: "",
     productDesc: "",
     productPrice: "",
@@ -27,33 +28,33 @@ const DetailProduct = () => {
   const [formErrors, setFormErrors] = useState(formData);
 
   // useEffect(() => {
-  //   console.log("productId from params:", productId); // Log to check the value
-  // }, [productId]);
+  //   console.log("productownerId from params:", productownerId); // Log to check the value
+  // }, [productownerId]);
 
-  const GetProductListbyId = gql`
+  const GetProductListbyIdOwner = gql`
     query MyQuery {
-      Product(where: {id: {_eq: "${productId}" } }) {
-        category
-        description
-        id
-        image
-        name
-        price
-        freshness
+      ProductOwner(where: {id2: {_eq: "${productownerId}" } }) {
+        category2
+        description2
+        id2
+        image2
+        name2
+        price2
+        freshness2
       }
     }
   `;
 
-  const { data, loading, error } = useQuery(GetProductListbyId, {
-    onCompleted: ({ Product: data }) =>
+  const { data, loading, error } = useQuery(GetProductListbyIdOwner, {
+    onCompleted: ({ ProductOwner: data }) =>
       setDataEdit({
-        productId: data[0].id,
-        productName: data[0].name,
-        productCathegory: data[0].category,
-        // productImage: data[0].image,
-        productFreshness: data[0].freshness,
-        productDesc: data[0].description,
-        productPrice: data[0].price,
+        productownerId: data[0].id2,
+        productName: data[0].name2,
+        productCathegory: data[0].category2,
+        productImage: data[0].image2,
+        productFreshness: data[0].freshness2,
+        productDesc: data[0].description2,
+        productPrice: data[0].price2,
       }),
   });
 
@@ -65,7 +66,7 @@ const DetailProduct = () => {
     return <div>Error: {error.message}</div>;
   }
 
-  if (!data?.Product?.length) {
+  if (!data?.ProductOwner?.length) {
     return <div>Produk Tidak Ada</div>;
   }
 
@@ -117,9 +118,9 @@ const DetailProduct = () => {
       cancelButtonText: "Batal",
     }).then((result) => {
       if (result.isConfirmed) {
-        hapusProduct({
+        hapusProductOwner({
           variables: {
-            id: dataEdit.productId,
+            id2: dataEdit.productownerId,
           },
         })
           .then(() => {
@@ -156,15 +157,15 @@ const DetailProduct = () => {
 
   const handleEdit = () => {
     if (validateForm()) {
-      updateProduct({
+      updateProductOwner({
         variables: {
-          id: dataEdit.productId,
+          id2: dataEdit.productownerId,
           object: {
-            name: dataEdit.productName,
-            price: dataEdit.productPrice,
-            freshness: dataEdit.productFreshness,
-            description: dataEdit.productDesc,
-            category: dataEdit.productCathegory,
+            name2: dataEdit.productName,
+            price2: dataEdit.productPrice,
+            freshness2: dataEdit.productFreshness,
+            description2: dataEdit.productDesc,
+            category2: dataEdit.productCathegory,
           },
         },
       })
@@ -200,7 +201,7 @@ const DetailProduct = () => {
         className="container mt-5 w-50"
         id="productForm"
       >
-        <h2>Detail Product</h2>
+        <h2>Detail Product Approved</h2>
         <div className="mb-4 mt-4 w-50">
           <label className="form-label has-success" htmlFor="productName">
             Nama Produk
@@ -315,17 +316,18 @@ const DetailProduct = () => {
         </div>
         <Button
           onClick={handleEdit}
-          className="btn btn-warning me-5 mb-5"
+          className="btn btn-warning2 me-5 mb-5"
+          style={{ width: "20rem" }}
           label="Edit"
         />
-        <Button
+        {/* <Button
           onClick={handleDelete}
           className="btn btn-danger ms-5 mb-5"
           label="Hapus"
-        />
+        /> */}
       </form>
     </div>
   );
 };
 
-export default DetailProduct;
+export default DetailProductOwner;

@@ -1,9 +1,9 @@
 import { useQuery } from "@apollo/client";
-import TableItem from "./TableItem";
-import { GetProductList } from "../../helpers/gqlHasura";
+import TableItemOwner from "./TableItemOwner";
+import { GetProductListOwner } from "../../helpers/gqlHasura";
 
-const Table = () => {
-  const { data, loading, error } = useQuery(GetProductList);
+const TableOwner = () => {
+  const { data, loading, error } = useQuery(GetProductListOwner);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -25,8 +25,8 @@ const Table = () => {
           </tr>
         </thead>
         <tbody>
-          {data?.Product.map((table, index) => (
-            <TableItem key={table.id} table={table} index={index} />
+          {data?.ProductOwner.map((table, index) => (
+            <TableItemOwner key={table.id2} table={table} index={index} />
           ))}
         </tbody>
       </table>
@@ -34,4 +34,4 @@ const Table = () => {
   );
 };
 
-export default Table;
+export default TableOwner;

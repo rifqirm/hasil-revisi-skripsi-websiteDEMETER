@@ -7,3 +7,17 @@
 .btn-primary {
     font-size: large;
 }
+
+.approved-icon {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .approved-icon span {
+    margin-left: 5px;
+    font-weight: bold;
+    color: green;
+  }
+  
