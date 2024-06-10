@@ -41,7 +41,7 @@ body{
 
 .bg_primary{
     background-color: var(--primary);
-    height: 590px;
+    height: 600px;
 }
 
 .bg_primary2{
@@ -51,7 +51,7 @@ body{
 
 .custom_banner{
     min-height: 200px;
-    margin-top: 250px;
+    margin-top: 90px;
 }
 
 .banner_link h1{
@@ -124,11 +124,18 @@ body{
     height: 100px!important;
 }
 
-.image_custom_banner{
+/* .image_custom_banner{
     position: relative;
     height: 900px;
     top: -460px;
     width: 700px;
+} */
+
+.image_custom_banner{
+    position: relative;
+    height: 724px;
+    top: -250px;
+    width: 755px;
 }
 
 .footer{
@@ -182,7 +189,7 @@ body{
 .grid2 div{
     width: 50%;
     position: relative;
-    top: 150px;
+    top: 100px;
 
 }
 

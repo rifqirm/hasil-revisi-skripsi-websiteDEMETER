@@ -12,7 +12,7 @@ import product5 from "../../assets/product/5aglonemaRedChocin.jpg";
 import product6 from "../../assets/product/6aglonemaRedMajesty.jpg";
 import product7 from "../../assets/product/7aglonemaRoDudAnjamani.jpg";
 import product8 from "../../assets/product/8aglonemaRotundumAceh.jpg";
-import home_banner4 from "../../assets/home_banner4-removebg.png";
+import home_banner4 from "../../assets/home_banner4-removebg2.png";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -87,8 +87,15 @@ const Homepage = () => {
             <div className={Styles.banner_link}>
               <h1>Menciptakan ruang yang indah dengan "Demeter"</h1>
               <p>
-                Membawa keindahan alam ke rumah Anda dan Rasakan keajaiban alam
-                dengan Demeter.
+                Bawalah keindahan alam ke rumah Anda dan rasakan keajaiban alam
+                dengan Demeter. Situs web kami menawarkan pilihan produk tanaman
+                hias ramah lingkungan yang akan mengubah ruang tinggal Anda
+                menjadi sebuah tempat perlindungan yang tenang. Apakah Anda
+                ingin menambahkan sentuhan hijau ke kantor, rumah, maupun tempat
+                tinggal Anda. Menciptakan taman dalam ruangan yang subur, atau
+                menemukan dekorasi unik yang terinspirasi oleh alam, Demeter
+                memiliki semua yang Anda butuhkan. Jelajahi koleksi kami dan
+                biarkan keajaiban alam memperindah kehidupan sehari-hari Anda.
               </p>
               <Link ref={linkRef} to="/keranjang" onClick={handleShopNowClick}>
                 BELANJA SEKARANG
