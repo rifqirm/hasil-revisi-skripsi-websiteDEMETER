@@ -150,6 +150,35 @@ body{
 }
 
 
+.scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px; /* Adjusted height and width for a larger button */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s;
+  }
+  
+  .scrollTop:hover {
+    background-color: #555;
+  }
+  
+  .scrollTop:focus {
+    outline: none;
+  }
+  
+  
+
+
 .grid2 div{
     width: 50%;
     position: relative;

@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { FaWhatsapp, FaFacebook, FaInstagram, FaArrowUp } from "react-icons/fa";
 import Styles from "../../styles/global.module.css";
 import footerLogo from "../../assets/logo-demeter-footer.png";
-import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const checkScrollTop = () => {
+      if (!showScroll && window.pageYOffset > 400) {
+        setShowScroll(true);
+      } else if (showScroll && window.pageYOffset <= 400) {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", checkScrollTop);
+    return () => {
+      window.removeEventListener("scroll", checkScrollTop);
+    };
+  }, [showScroll]);
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className={`${Styles.row2} ${Styles.bg_primary2} ${Styles.footer}`}>
       <div className={Styles.footerLeft}>
@@ -41,6 +62,13 @@ const Footer = () => {
       <div className={Styles.footerRight}>
         <p>&copy; Copyright DEMETER 2024</p>
       </div>
+      <button
+        className={Styles.scrollTop}
+        onClick={scrollTop}
+        style={{ display: showScroll ? "flex" : "none" }}
+      >
+        <FaArrowUp size={25} />
+      </button>
     </div>
   );
 };
