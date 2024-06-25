@@ -184,7 +184,7 @@ const FormOwner = ({ product }) => {
       className="container mt-5 w-50"
       id="productForm"
     >
-      <h2>Detil Produk</h2>
+      <h2>Detail Update Permintaan Produk</h2>
       <div className="mb-4 mt-4 w-50">
         <label className="form-label has-success" htmlFor="productName">
           Nama Produk

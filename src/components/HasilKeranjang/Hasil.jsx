@@ -76,8 +76,8 @@ export default class Hasil extends Component {
       .put(API_URL + "keranjangs/" + this.state.keranjangDetail.id, data)
       .then((res) => {
         swal({
-          title: "Update Produk!",
-          text: "Sukses Update Produk " + data.product.nama,
+          title: "Update Pesanan Produk!",
+          text: "Sukses Update Pesanan Produk " + data.product.nama,
           icon: "success",
           button: false,
           timer: 1500,
@@ -111,7 +111,7 @@ export default class Hasil extends Component {
             this.props.getListKeranjang();
             swal({
               title: "Menghapus",
-              text: "Produk Berhasil Di Hapus",
+              text: "Produk Pesanan Berhasil Di Hapus",
               icon: "success",
               button: false,
               timer: 1500,
@@ -146,6 +146,7 @@ export default class Hasil extends Component {
                 <ListGroup.Item
                   key={menuKeranjang.id}
                   onClick={() => this.handleShow(menuKeranjang)}
+                  style={{ backgroundColor: "#a5d5951f" }} // Added styles here
                 >
                   <Row>
                     <Col xs={2}>
