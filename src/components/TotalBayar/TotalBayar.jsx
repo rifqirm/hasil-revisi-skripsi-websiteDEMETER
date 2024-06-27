@@ -4,6 +4,7 @@ import { Row, Col, Button, Modal, Form } from "react-bootstrap";
 import { numberWithCommas } from "../../utils/utils";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import emailjs from "emailjs-com"; // Import EmailJS library
 import axios from "axios";
 import { API_URL } from "../../utils/constants";
 import "./TotalBayar.css";
@@ -31,18 +32,62 @@ function TotalBayar(props) {
   const submitTotalBayar = (totalBayar) => {
     const pesanan = {
       total_bayar: totalBayar,
-      menus: props.keranjangs,
+      menuKeranjang: props.keranjangs,
       customer: form,
     };
 
+    // Kirim pesanan ke backend (opsional, jika masih dibutuhkan)
     axios
-      .post(API_URL + "pesanans", pesanan)
+      .post(`${API_URL}pesanans`, pesanan)
       .then((res) => {
+        // Navigasi ke halaman sukses setelah pesanan terkirim (opsional)
         navigate("/sukses");
       })
       .catch((error) => {
         console.error("Error:", error);
         // Handle error if needed
+      });
+
+    // Kirim email menggunakan EmailJS setelah pesanan terkirim
+    sendEmail(pesanan);
+  };
+
+  const sendEmail = (pesanan) => {
+    // Konfigurasi EmailJS
+    const templateParams = {
+      from_name: form.nama,
+      from_email: form.email,
+      to_email: "rifqirrm15122@gmail.com", // Ganti dengan email penerima
+      subject: "Pemesanan Produk",
+      nama: form.nama,
+      nomorHP: form.nomorHP,
+      email: form.email,
+      noKtp: form.noKtp,
+      alamat: form.alamat,
+      totalBayar: numberWithCommas(pesanan.total_bayar),
+      menuKeranjang: pesanan.menuKeranjang
+        .map(
+          (menuKeranjang) =>
+            `${menuKeranjang.product.nama} - Rp. ${numberWithCommas(
+              menuKeranjang.total_harga
+            )}`
+        )
+        .join("<br>"),
+    };
+
+    // Kirim email menggunakan EmailJS
+    emailjs
+      .send(
+        "service_kfnktyf",
+        "template_p2v8gbz",
+        templateParams,
+        "iryel-NiU8x5XEFvU"
+      )
+      .then((response) => {
+        console.log("Email berhasil dikirim!", response.status, response.text);
+      })
+      .catch((error) => {
+        console.error("Gagal mengirim email:", error);
       });
   };
 
@@ -135,7 +180,7 @@ function TotalBayar(props) {
               onClick={() => setShowModal(true)}
               disabled={keranjangsEmpty}
             >
-              <FontAwesomeIcon icon={faShoppingCart} className="ms--5 me-2" />{" "}
+              <FontAwesomeIcon icon={faShoppingCart} className="ms-2 me-2" />{" "}
               <strong>BAYAR</strong>
             </Button>
           </Col>
@@ -161,7 +206,7 @@ function TotalBayar(props) {
               onClick={() => setShowModal(true)}
               disabled={keranjangsEmpty}
             >
-              <FontAwesomeIcon icon={faShoppingCart} className="ms--5 me-2" />{" "}
+              <FontAwesomeIcon icon={faShoppingCart} className="ms-2 me-2" />{" "}
               <strong>BAYAR</strong>
             </Button>
           </Col>

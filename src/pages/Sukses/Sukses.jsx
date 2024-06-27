@@ -29,7 +29,7 @@ export default class Sukses extends Component {
         <h2>Order Produk Sukses</h2>
         <p variant="sukses">
           <center>
-            Terimakasih sudah membeli produk, penjual akan menghubungi Anda!
+            Terimakasih sudah memesan produk, penjual akan menghubungi Anda!
           </center>
         </p>
         <Button
