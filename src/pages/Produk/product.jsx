@@ -73,7 +73,7 @@ const ProductList = () => {
                   className="input form-control"
                   value={search}
                   onChange={handleSearch}
-                  placeholder="🔍 Search Product..."
+                  placeholder="🔍 Cari Produk..."
                 />
               </div>
             </div>
