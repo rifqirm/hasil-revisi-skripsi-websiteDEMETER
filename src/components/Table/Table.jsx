@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import TableItem from "./TableItem";
 import { GetProductList } from "../../helpers/gqlHasura";
+import "./table.css";
 
 const Table = () => {
   const { data, loading, error } = useQuery(GetProductList);
@@ -11,17 +12,15 @@ const Table = () => {
   return (
     <div className="container mt-5">
       <h2 className="text-center mb-4">Daftar Produk</h2>
-      <table className="table table-striped w-100" id="data-table">
+      <table className="table table-striped w-full" id="data-table">
         <thead>
           <tr>
-            <th scope="col">No</th>
-            <th scope="col">Nama Produk</th>
-            <th scope="col">Kategori Produk Tanaman Hias</th>
-            <th scope="col">Jenis Produk</th>
-            <th scope="col">Deskripsi Tambahan</th>
-            <th scope="col" style={{ textAlign: "center" }}>
-              Jumlah Produk
-            </th>
+            <th className="column-no">No</th>
+            <th className="column-name">Nama Produk</th>
+            <th className="column-category">Kategori Produk Tanaman Hias</th>
+            <th className="column-type">Jenis Produk</th>
+            <th className="column-description">Deskripsi Tambahan</th>
+            <th className="column-quantity">Jumlah Produk</th>
           </tr>
         </thead>
         <tbody>

@@ -93,6 +93,9 @@ function TotalBayar(props) {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    // Ensure the value is not longer than the allowed length
+    if (name === "nomorHP" && value.length > 13) return;
+    if (name === "noKtp" && value.length > 16) return;
     setForm({ ...form, [name]: value });
   };
 
@@ -110,6 +113,13 @@ function TotalBayar(props) {
     if (!nomorHP) {
       formIsValid = false;
       errors["nomorHP"] = "Nomor Handphone wajib diisi";
+    } else {
+      let pattern = /^[0-9]{10,13}$/; // 10 to 13 digits
+      if (!pattern.test(nomorHP)) {
+        formIsValid = false;
+        errors["nomorHP"] =
+          "Nomor HP harus terdiri dari 10 hingga 13 digit angka";
+      }
     }
 
     if (!email) {
@@ -243,6 +253,10 @@ function TotalBayar(props) {
                 name="nomorHP"
                 value={form.nomorHP}
                 onChange={handleInputChange}
+                onInput={(e) =>
+                  e.target.value.length > 13 &&
+                  (e.target.value = e.target.value.slice(0, 13))
+                }
               />
               <span className="text-danger">{formErrors.nomorHP}</span>
             </Form.Group>
@@ -262,12 +276,15 @@ function TotalBayar(props) {
             <Form.Group controlId="noKtp">
               <Form.Label className="mt-3">Nomor NIK KTP</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 placeholder="Masukkan nomor NIK KTP Anda (16 digit angka)!"
-                maxLength={16}
                 name="noKtp"
                 value={form.noKtp}
                 onChange={handleInputChange}
+                onInput={(e) =>
+                  e.target.value.length > 16 &&
+                  (e.target.value = e.target.value.slice(0, 16))
+                }
               />
               <span className="text-danger">{formErrors.noKtp}</span>
             </Form.Group>
